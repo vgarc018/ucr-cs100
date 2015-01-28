@@ -1,1 +1,9 @@
-/ 100
+75 / 100
+
++10: extra
+
+no example of:
+-5: lots of commands chained together
+-10: mixing and matching different operators in one commands
+-15: exit with params,  exit as a param to another command, exit in a chain of commands
+-5: comment where '#' touches something else
