@@ -34,3 +34,57 @@ Extra Credit 2: /20
     [ /5]  2>>filename
 
 
+valgrind output:
+==12311== Memcheck, a memory error detector
+==12311== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.
+==12311== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info
+==12311== Command: bin/rshell
+==12311== 
+/home/csgrads/celikkae/hw2/files/vgarc018/rshell
+celikkae@hammer.cs.ucr.edu$ ==12311== Invalid write of size 1
+==12311==    at 0x4A080CF: __GI_strcpy (mc_replace_strmem.c:443)
+==12311==    by 0x401F2D: parsing(std::string&) (in /home/csgrads/celikkae/hw2/files/vgarc018/rshell/bin/rshell)
+==12311==    by 0x404034: main (in /home/csgrads/celikkae/hw2/files/vgarc018/rshell/bin/rshell)
+==12311==  Address 0x4c33352 is 0 bytes after a block of size 2 alloc'd
+==12311==    at 0x4A07192: operator new[](unsigned long) (vg_replace_malloc.c:363)
+==12311==    by 0x401EF8: parsing(std::string&) (in /home/csgrads/celikkae/hw2/files/vgarc018/rshell/bin/rshell)
+==12311==    by 0x404034: main (in /home/csgrads/celikkae/hw2/files/vgarc018/rshell/bin/rshell)
+==12311== 
+==12312== Invalid read of size 1
+==12312==    at 0x4A07B84: __GI_strchr (mc_replace_strmem.c:223)
+==12312==    by 0x3B536AD423: execvpe (in /lib64/libc-2.12.so)
+==12312==    by 0x401977: cexec(char**) (in /home/csgrads/celikkae/hw2/files/vgarc018/rshell/bin/rshell)
+==12312==    by 0x4022AF: parsing(std::string&) (in /home/csgrads/celikkae/hw2/files/vgarc018/rshell/bin/rshell)
+==12312==    by 0x404034: main (in /home/csgrads/celikkae/hw2/files/vgarc018/rshell/bin/rshell)
+==12312==  Address 0x4c33352 is 0 bytes after a block of size 2 alloc'd
+==12312==    at 0x4A07192: operator new[](unsigned long) (vg_replace_malloc.c:363)
+==12312==    by 0x401EF8: parsing(std::string&) (in /home/csgrads/celikkae/hw2/files/vgarc018/rshell/bin/rshell)
+==12312==    by 0x404034: main (in /home/csgrads/celikkae/hw2/files/vgarc018/rshell/bin/rshell)
+==12312== 
+==12312== Invalid read of size 1
+==12312==    at 0x4A07FC4: __GI_strlen (mc_replace_strmem.c:404)
+==12312==    by 0x3B536AD56C: execvpe (in /lib64/libc-2.12.so)
+==12312==    by 0x401977: cexec(char**) (in /home/csgrads/celikkae/hw2/files/vgarc018/rshell/bin/rshell)
+==12312==    by 0x4022AF: parsing(std::string&) (in /home/csgrads/celikkae/hw2/files/vgarc018/rshell/bin/rshell)
+==12312==    by 0x404034: main (in /home/csgrads/celikkae/hw2/files/vgarc018/rshell/bin/rshell)
+==12312==  Address 0x4c33352 is 0 bytes after a block of size 2 alloc'd
+==12312==    at 0x4A07192: operator new[](unsigned long) (vg_replace_malloc.c:363)
+==12312==    by 0x401EF8: parsing(std::string&) (in /home/csgrads/celikkae/hw2/files/vgarc018/rshell/bin/rshell)
+==12312==    by 0x404034: main (in /home/csgrads/celikkae/hw2/files/vgarc018/rshell/bin/rshell)
+==12312== 
+==12312== Invalid read of size 1
+==12312==    at 0x4A08DEC: memcpy (mc_replace_strmem.c:882)
+==12312==    by 0x3B536AD5C6: execvpe (in /lib64/libc-2.12.so)
+==12312==    by 0x401977: cexec(char**) (in /home/csgrads/celikkae/hw2/files/vgarc018/rshell/bin/rshell)
+==12312==    by 0x4022AF: parsing(std::string&) (in /home/csgrads/celikkae/hw2/files/vgarc018/rshell/bin/rshell)
+==12312==    by 0x404034: main (in /home/csgrads/celikkae/hw2/files/vgarc018/rshell/bin/rshell)
+==12312==  Address 0x4c33352 is 0 bytes after a block of size 2 alloc'd
+==12312==    at 0x4A07192: operator new[](unsigned long) (vg_replace_malloc.c:363)
+==12312==    by 0x401EF8: parsing(std::string&) (in /home/csgrads/celikkae/hw2/files/vgarc018/rshell/bin/rshell)
+==12312==    by 0x404034: main (in /home/csgrads/celikkae/hw2/files/vgarc018/rshell/bin/rshell)
+==12312== 
+==12312== Syscall param execve(argv[i]) points to unaddressable byte(s)
+
+
+
+
