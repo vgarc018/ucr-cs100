@@ -85,6 +85,56 @@ celikkae@hammer.cs.ucr.edu$ ==12311== Invalid write of size 1
 ==12312== 
 ==12312== Syscall param execve(argv[i]) points to unaddressable byte(s)
 
+==12312==    at 0x3B536ACDA7: execve (in /lib64/libc-2.12.so)
+==12312==    by 0x3B536AD630: execvpe (in /lib64/libc-2.12.so)
+==12312==    by 0x401977: cexec(char**) (in /home/csgrads/celikkae/hw2/files/vgarc018/rshell/bin/rshell)
+==12312==    by 0x4022AF: parsing(std::string&) (in /home/csgrads/celikkae/hw2/files/vgarc018/rshell/bin/rshell)
+==12312==    by 0x404034: main (in /home/csgrads/celikkae/hw2/files/vgarc018/rshell/bin/rshell)
+==12312==  Address 0x4c33352 is 0 bytes after a block of size 2 alloc'd
+==12312==    at 0x4A07192: operator new[](unsigned long) (vg_replace_malloc.c:363)
+==12312==    by 0x401EF8: parsing(std::string&) (in /home/csgrads/celikkae/hw2/files/vgarc018/rshell/bin/rshell)
+==12312==    by 0x404034: main (in /home/csgrads/celikkae/hw2/files/vgarc018/rshell/bin/rshell)
+==12312== 
+bin
+LICENSE
+Makefile
+README.md
+src
+test
+/home/csgrads/celikkae/hw2/files/vgarc018/rshell
+celikkae@hammer.cs.ucr.edu$ Thanks for using Rshell
+==12311== 
+==12311== HEAP SUMMARY:
+==12311==     in use at exit: 31 bytes in 2 blocks
+==12311==   total heap usage: 93 allocs, 91 frees, 46,178 bytes allocated
+==12311== 
+==12311== 2 bytes in 1 blocks are definitely lost in loss record 1 of 2
+==12311==    at 0x4A07192: operator new[](unsigned long) (vg_replace_malloc.c:363)
+==12311==    by 0x401EF8: parsing(std::string&) (in /home/csgrads/celikkae/hw2/files/vgarc018/rshell/bin/rshell)
+==12311==    by 0x404034: main (in /home/csgrads/celikkae/hw2/files/vgarc018/rshell/bin/rshell)
+==12311== 
+==12311== 29 bytes in 1 blocks are possibly lost in loss record 2 of 2
+==12311==    at 0x4A075FC: operator new(unsigned long) (vg_replace_malloc.c:298)
+==12311==    by 0x3B5B29C3C8: std::string::_Rep::_S_create(unsigned long, unsigned long, std::allocator<char> const&) (in /usr/lib64/libstdc++.so.6.0.13)
+==12311==    by 0x3B5B29D19A: std::string::_Rep::_M_clone(std::allocator<char> const&, unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==12311==    by 0x3B5B29D5EB: std::string::reserve(unsigned long) (in /usr/lib64/libstdc++.so.6.0.13)
+==12311==    by 0x3B5B27BFF4: std::basic_istream<char, std::char_traits<char> >& std::getline<char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::basic_string<char, std::char_traits<char>, std::allocator<char> >&, char) (in /usr/lib64/libstdc++.so.6.0.13)
+==12311==    by 0x403DBF: main (in /home/csgrads/celikkae/hw2/files/vgarc018/rshell/bin/rshell)
+==12311== 
+==12311== LEAK SUMMARY:
+==12311==    definitely lost: 2 bytes in 1 blocks
+==12311==    indirectly lost: 0 bytes in 0 blocks
+==12311==      possibly lost: 29 bytes in 1 blocks
+==12311==    still reachable: 0 bytes in 0 blocks
+==12311==         suppressed: 0 bytes in 0 blocks
+==12311== 
+==12311== For counts of detected and suppressed errors, rerun with: -v
+==12311== ERROR SUMMARY: 3 errors from 3 contexts (suppressed: 6 from 6)
+
+bin/rshell
+/home/csgrads/celikkae/hw2/files/vgarc018/rshell
+celikkae@hammer.cs.ucr.edu$ /home/csgrads/celikkae/hw2/files/vgarc018/rshell
+celikkae@hammer.cs.ucr.edu$ aaaa
 
 
 
